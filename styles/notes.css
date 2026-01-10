@@ -1,18 +1,15 @@
-/* --- Global Container (Used for width limit/centering content) --- */
 .container {
-    max-width: 1200px; /* Example max width */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- Section Styling --- */
 .problems-section {
-    padding: 80px 0; /* Vertical padding */
-    background-color: #FFFFFF; /* White background */
+    padding: 80px 0; 
+    background-color: #FFFFFF; 
     text-align: center;
 }
 
-/* --- Section Header --- */
 .section-header {
     margin-bottom: 60px;
 }
@@ -20,26 +17,24 @@
 .section-header h2 {
     font-size: 36px;
     font-weight: 700;
-    color: #121926; /* Dark text */
+    color: #121926; 
     margin-bottom: 12px;
 }
 
 .section-header p {
     font-size: 18px;
-    color: #6B7280; /* Gray subtitle text */
+    color: #6B7280; 
 }
 
-/* --- Grid Layout --- */
 .problem-cards-grid {
     display: flex;
     justify-content: space-between;
-    gap: 40px; /* Spacing between cards */
-    padding: 0 120px; /* Padding on the left and right, matching Figma */
+    gap: 40px;
+    padding: 0 120px; 
 }
 
-/* --- Individual Card Styling --- */
 .problem-card {
-    flex-basis: 25%; /* Each card takes up 1/4 of the space */
+    flex-basis: 25%; 
     text-align: center;
 }
 
@@ -56,7 +51,6 @@
     line-height: 1.5;
 }
 
-/* --- Icon Styling --- */
 .icon-box {
     display: flex;
     justify-content: center;
@@ -64,26 +58,17 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    margin: 0 auto; /* Center the icon box */
-    
-    /* Box shadow is common for these elements, though not specified, 
-       it can make them pop. */
+    margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
 }
 
 .icon-box img {
     width: 24px; 
     height: 24px;
-    /* Since the icons are likely image files, you may not be able to change their color 
-       with CSS. If the icons are SVGs, you can use: fill: #FFFFFF; 
-       If they are PNGs, they need to be white in the asset file itself. 
-       Assuming your assets (e.g., Info.png) are white icons on a transparent background. */
+    are white icons on a transparent background. */
 }
 
-/* The red circle background for the icons (from Figma design) */
 .red-icon {
-    /* Use the solid red color for the background */
     background-color: #F95555; 
-    /* The border is no longer needed since the background is solid red */
     border: none;
 }
