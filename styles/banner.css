@@ -1,0 +1,168 @@
+/* --- Hero Section Styling --- */
+.hero-section {
+    /* Set the background image from your assets folder */
+    background: url('/B13-A01-Knowledge-Vault/assets/hero-bg.png') no-repeat center center;
+    background-size: cover;
+    /* The dimensions from your Figma inspector panel (1600px x 674px) */
+    width: 100%;
+    height: 674px; /* Adjust if needed for full responsiveness */
+    
+    /* Use Flexbox to center the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Add padding to prevent content touching the edges on smaller screens */
+    padding: 70px 120px 120px 134px; /* Matching Figma padding: Top 70, Right 120, Bottom 120, Left 134 */
+    
+    /* The blue overlay color on the image */
+    position: relative;
+}
+
+/* Add a subtle overlay effect for better text readability, matching the design dark overlay */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Adjust this color/opacity to fine-tune the overlay effect */
+    background-color: rgba(18, 25, 38, 0.4); 
+}
+
+/* Ensure content is above the overlay */
+.hero-content {
+    text-align: center;
+    color: #FFFFFF; /* White text color */
+    max-width: 800px; /* Limit the width of the content block */
+    z-index: 10; /* Ensure it's above the ::before overlay */
+}
+
+/* --- Early Access Tag --- */
+.early-access {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 6px 14px;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.early-access .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #50C878; /* Green dot color */
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* --- Title/Heading --- */
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 400; 
+    line-height: 1.2;
+    margin-bottom: 20px;
+    /* This sets the default color for the h1 (which is "Structured Thinking,") to White */
+    color: #FFFFFF; 
+}
+.hero-content .green-text {
+    font-weight: 700; /* Bold weight for 'Not Just Note-Taking.' */
+    color: #50C878;  /* <-- **FIXED: Green accent color** */
+}
+
+/* Styling for the bold part of the title (wrap in ** tags in HTML) */
+.hero-content h1 strong {
+    font-weight: 700; /* Bold weight for 'Not Just Note-Taking' */
+    color: #50C878; /* Green accent color */
+}
+
+/* --- Description/Subtitle --- */
+.hero-content .description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.8; /* Slightly less opaque for subtitle */
+}
+
+/* --- Buttons --- */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* Spacing between buttons */
+}
+
+.primary-button,
+.secondary-button {
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Fix for the Arrow size */
+
+/* Primary Button (Start Building Your Vault) */
+.primary-button {
+    background-color: #50C878; /* Green background */
+    color: white; /* Dark text color */
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.primary-button img {
+    width: 20px; /* Example size */
+    height: 20px; 
+    object-fit: contain;
+}
+
+
+.primary-button:hover {
+    background-color: #43A047; /* Slightly darker green on hover */
+}
+
+/* Secondary Button (See How It Works) */
+.secondary-button {
+    /* Existing flex and padding styles should remain */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; 
+    
+    background-color: transparent; /* <-- **FIXED: Now transparent** */
+    color: #FFFFFF;               /* White text color */
+    border: 1px solid #FFFFFF;    /* <-- **FIXED: White border** */
+}
+.secondary-button:hover {
+    /* Add a subtle hover effect */
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.play-icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px; 
+    height: 32px;
+    border-radius: 50%;
+    /* Use the primary color for the background */
+    background-color: #50C878; /* Green accent color */
+    position: relative;
+}
+
+.play-triangle {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    /* Use a dark color for the triangle to contrast with the green box */
+    border-left: 10px solid #121926; 
+    
+    transform: translateX(1px); 
+}
