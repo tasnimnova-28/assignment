@@ -60,3 +60,10 @@ footer {
 .social-icon:hover {
     opacity: 1;
 }
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    
+    
+    filter: brightness(0) invert(1);
+}
